@@ -5,6 +5,8 @@ const app = express()
 const port = 3000;
 
 app.use(express.static('views'))
+app.use(express.static('public/images'))
+
 app.use(express.static('videos'))
 
 
@@ -30,6 +32,6 @@ app.get('/imgdownload', (req, res) => {
 
 
 
-app.listen(port, () => {
+app.listen(port,"192.168.1.12",() => {
     console.log('server is running' + port)
 })
